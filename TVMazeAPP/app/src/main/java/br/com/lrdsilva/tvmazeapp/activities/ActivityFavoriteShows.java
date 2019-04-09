@@ -26,11 +26,12 @@ public class ActivityFavoriteShows extends ActivityBase {
         objClass = getClass();
         ArrayList<Integer> favorite = initFavoritos();
         //TODO: Not a good way to do it, slows down Init
-        for(int i =0; i<favorite.size(); i++)
-        {
-            fetchData(favorite.get(i));
-        }
-        Toast.makeText(getApplicationContext(),"Displaying Content...", Toast.LENGTH_LONG).show();
+        if(favorite != null)
+            for(int i =0; i<favorite.size(); i++)
+            {
+                fetchData(favorite.get(i));
+            }
+
 
     }
 

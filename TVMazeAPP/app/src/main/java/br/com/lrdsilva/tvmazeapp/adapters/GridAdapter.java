@@ -33,8 +33,8 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     private ArrayList<Show> showsList;
     private Context context;
-    public ArrayList<Integer> favoriteShows = ActivityBase.activityBaseSharedInstance.initFavoritos();
-    public ArrayList<Integer> oldFavoriteShows = favoriteShows;
+    public ArrayList<Integer> favoriteShows = new ArrayList<>();
+        public ArrayList<Integer> oldFavoriteShows = favoriteShows;
     public static GridAdapter adapter;
     private ViewHolder currentViewHolder;
 
@@ -43,6 +43,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         this.showsList=showsList;
         this.context=context;
         adapter = this;
+        favoriteShows =ActivityBase.activityBaseSharedInstance.initFavoritos();
 
     }
 
