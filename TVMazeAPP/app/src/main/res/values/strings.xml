@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TVMazeAPP</string>
+    <string name="contentDesShow">Show image from cache or HTTP</string>
+    <string name="openDrawer">Open</string>>
+    <string name="closeDrawer">Close</string>>
+    <string-array name="optionsdrawer">
+        <item>Shows</item>
+        <item>Favorites</item>
+        <item>Leave</item>
+    </string-array>
+</resources>

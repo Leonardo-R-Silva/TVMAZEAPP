@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="310dp"
+            android:layout_height="415dp"
+            android:id="@+id/detailsshowLayout"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/detailsTextLayout"
+            >
+
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/detailsshowposter"
+                android:contentDescription="@string/contentDesShow">
+            </ImageView>
+
+            <ToggleButton
+                android:id="@+id/favoritedetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/contentDesShow"
+                android:scaleType="fitStart" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/detailsTextLayout"
+            app:layout_constraintTop_toBottomOf="@id/detailsshowLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/detailstitle"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:text="Tittle">
+            </TextView>
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/detailstgenre"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:text="Genre">
+            </TextView>
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:id="@+id/detailspremiered"
+                android:text="Premiered">
+            </TextView>
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/detailssummary"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:singleLine="false"
+                android:textAlignment="center"
+                android:text="Summary">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

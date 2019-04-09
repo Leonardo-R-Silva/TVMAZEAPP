@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/noConLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/noConText"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:singleLine="false"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:text="No connection available!">
+
+            </TextView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/retryCon"
+                android:background="@color/retryColor"
+                android:scaleType="center"
+                android:textSize="25sp"
+                android:text="RETRY">
+            </Button>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

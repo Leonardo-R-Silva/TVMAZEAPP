@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardposter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@id/titlecard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/showposter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:contentDescription="@string/contentDesShow"
+                android:focusable="false"
+                android:onClick="onShowClick"
+                android:scaleType="fitStart" />
+
+            <ToggleButton
+                android:id="@+id/favorito"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:textOff=""
+                android:textOn=""
+                android:contentDescription="@string/contentDesShow"
+                android:scaleType="fitStart" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/titlecard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardposter">
+
+
+            <TextView
+                android:id="@+id/showtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitEnd"
+                android:text="Titulo"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/showgenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/showtitulo"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:scaleType="fitEnd"
+                android:text="Genero"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+</android.support.constraint.ConstraintLayout>
